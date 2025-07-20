@@ -1,0 +1,67 @@
+# Atlas Coder Configuration
+# Cost-optimized LLM programming assistant
+
+# Model Strategy Configuration
+model_strategy: "cost-optimal"  # cost-optimal | quality-optimal | local-only
+
+# Budget Management
+daily_budget: 1.0  # USD per day
+cost_tracking: true
+budget_alerts: true
+
+# Provider Configuration
+providers:
+  openrouter:
+    api_key_env: "OPENROUTER_API_KEY"
+    base_url: "https://openrouter.ai/api/v1"
+    models:
+      cost_optimal: "google/gemini-2.0-flash-lite"
+      quality_optimal: "google/gemini-2.0-flash-exp"
+  
+  ollama:
+    base_url: "http://localhost:11434"
+    models:
+      local_fallback: "llama3.2"
+
+# Caching Configuration
+caching:
+  enabled: true
+  cache_dir: "./dspy_cache"
+  ttl_hours: 24
+  max_size_mb: 500
+
+# Workflow Configuration
+workflows:
+  bug_fixing:
+    generate_tests: true
+    auto_apply_fixes: false  # Set to true for YOLO mode
+    backup_original: true
+  
+  code_generation:
+    include_tests: true
+    include_docs: true
+    follow_pep8: true
+  
+  analysis:
+    focus_areas: ["security", "performance", "style", "maintainability"]
+    detailed_reports: true
+
+# Git Integration
+git:
+  auto_commit: false  # Enable with --yolo flag
+  commit_message_template: "feat: {description} via Atlas Coder"
+  create_patches: true
+  backup_before_changes: true
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "./logs/atlas_coder.log"
+  max_size_mb: 10
+  backup_count: 5
+
+# Output Configuration
+output:
+  format: "rich"  # rich | plain | json
+  show_cost_estimates: true
+  verbose: false
