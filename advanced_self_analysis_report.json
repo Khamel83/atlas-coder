@@ -1,0 +1,537 @@
+{
+  "timestamp": "2025-07-20T15:08:35.349019",
+  "project_structure": {
+    "total_files": 169,
+    "python_files": 63,
+    "modules": {
+      "site": {
+        "files": 1,
+        "lines": 8,
+        "functions": 0,
+        "classes": 0,
+        "complexity": 1,
+        "intelligence_indicators": 1
+      },
+      "tests": {
+        "files": 7,
+        "lines": 272,
+        "functions": 30,
+        "classes": 6,
+        "complexity": 9,
+        "intelligence_indicators": 12
+      },
+      "examples": {
+        "files": 11,
+        "lines": 2386,
+        "functions": 89,
+        "classes": 17,
+        "complexity": 363,
+        "intelligence_indicators": 430
+      },
+      "atlas_coder": {
+        "files": 23,
+        "lines": 2003,
+        "functions": 114,
+        "classes": 30,
+        "complexity": 178,
+        "intelligence_indicators": 297
+      },
+      "backup_pre_dspy3": {
+        "files": 1,
+        "lines": 418,
+        "functions": 7,
+        "classes": 0,
+        "complexity": 68,
+        "intelligence_indicators": 39
+      },
+      "dspy_core": {
+        "files": 13,
+        "lines": 3689,
+        "functions": 242,
+        "classes": 73,
+        "complexity": 360,
+        "intelligence_indicators": 657
+      }
+    },
+    "documentation_files": 21,
+    "test_files": 7,
+    "config_files": 11,
+    "complexity_distribution": {}
+  },
+  "code_intelligence": {
+    "total_intelligence_score": 7885,
+    "advanced_patterns": [
+      {
+        "name": "multi_hop_reasoning",
+        "count": 74,
+        "files": [
+          "upgrade_dspy3.py",
+          "self_analysis_demo.py",
+          "self_analysis_pure.py",
+          "reasoning.py",
+          "modules.py",
+          "community.py",
+          "claude_code_parity.py",
+          "bootstrap.py",
+          "agentic.py"
+        ]
+      },
+      {
+        "name": "optimization",
+        "count": 714,
+        "files": [
+          "upgrade_dspy3.py",
+          "setup_professional_structure.py",
+          "atlas_dspy_v6.py",
+          "test_engine.py",
+          "test_cli.py",
+          "self_analysis_demo.py",
+          "self_analysis_pure.py",
+          "real_usage_demo.py",
+          "v6_demo.py",
+          "optimization.py",
+          "meta_learning.py",
+          "main.py",
+          "workflows.py",
+          "engine.py",
+          "logging.py",
+          "community.py",
+          "progressive_execution.py",
+          "claude_code_parity.py",
+          "bootstrap.py",
+          "cache.py",
+          "signatures.py",
+          "agentic.py",
+          "model_strategy.py"
+        ]
+      },
+      {
+        "name": "advanced_dspy",
+        "count": 338,
+        "files": [
+          "upgrade_dspy3.py",
+          "setup_professional_structure.py",
+          "atlas_dspy_v6.py",
+          "test_engine.py",
+          "self_analysis_demo.py",
+          "self_analysis_pure.py",
+          "real_usage_demo.py",
+          "v6_demo.py",
+          "meta_learning.py",
+          "reasoning.py",
+          "workflows.py",
+          "modules.py",
+          "signatures.py",
+          "engine.py",
+          "community.py",
+          "claude_code_parity.py",
+          "bootstrap.py",
+          "optimization.py",
+          "cache.py",
+          "agentic.py"
+        ]
+      },
+      {
+        "name": "recursive_analysis",
+        "count": 140,
+        "files": [
+          "setup_professional_structure.py",
+          "self_analysis_demo.py",
+          "self_analysis_pure.py",
+          "workflows.py",
+          "modules.py",
+          "community.py",
+          "claude_code_parity.py",
+          "bootstrap.py",
+          "agentic.py"
+        ]
+      },
+      {
+        "name": "meta_learning",
+        "count": 71,
+        "files": [
+          "atlas_dspy_v6.py",
+          "self_analysis_demo.py",
+          "self_analysis_pure.py",
+          "v6_demo.py",
+          "meta_learning.py",
+          "reasoning.py",
+          "workflows.py",
+          "modules.py",
+          "bootstrap.py"
+        ]
+      },
+      {
+        "name": "pattern_recognition",
+        "count": 10,
+        "files": [
+          "self_analysis_demo.py",
+          "self_analysis_pure.py",
+          "meta_learning.py"
+        ]
+      },
+      {
+        "name": "intelligent_caching",
+        "count": 36,
+        "files": [
+          "self_analysis_pure.py",
+          "meta_learning.py",
+          "reasoning.py",
+          "optimization.py"
+        ]
+      }
+    ],
+    "dspy_integration": 659,
+    "meta_programming": 6,
+    "reasoning_chains": 8,
+    "learning_mechanisms": 0,
+    "optimization_strategies": 24,
+    "intelligence_density": 125.15873015873017
+  },
+  "architectural_patterns": {
+    "layered_architecture": true,
+    "modular_design": true,
+    "dependency_injection": true,
+    "factory_patterns": 20,
+    "observer_patterns": 2,
+    "strategy_patterns": 21,
+    "advanced_patterns": [
+      "chain_of_thought",
+      "recursive",
+      "multi_hop",
+      "meta_learning",
+      "self_improving",
+      "adaptive",
+      "program_of_thought",
+      "compositional",
+      "introspective"
+    ],
+    "architectural_sophistication": 1.0,
+    "module_coupling": "unknown",
+    "design_principles": [
+      "Single Responsibility",
+      "Dependency Inversion"
+    ]
+  },
+  "complexity_metrics": {
+    "total_lines_of_code": 13560,
+    "effective_lines_of_code": 10245,
+    "avg_function_complexity": 3.035019455252918,
+    "max_function_complexity": 29,
+    "avg_class_complexity": 10.698412698412698,
+    "cognitive_complexity": 3.4747081712062258,
+    "abstraction_level": 1.0,
+    "complexity_distribution": {
+      "simple": 446,
+      "moderate": 44,
+      "complex": 19,
+      "very_complex": 5
+    },
+    "maintainability_index": 0
+  },
+  "improvement_opportunities": [
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in atlas_dspy.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "Potential enumerate() usage in test_buggy_code.py",
+      "priority": "low",
+      "intelligence_impact": "readability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in upgrade_dspy3.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in setup_professional_structure.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in atlas_dspy_v6.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in self_analysis_demo.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "Potential enumerate() usage in self_analysis_pure.py",
+      "priority": "low",
+      "intelligence_impact": "readability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in self_analysis_pure.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in main.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in aider.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in meta_learning.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in reasoning.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in workflows.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in engine.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in atlas_dspy_v6.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in workflows.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in modules.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in community.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in progressive_execution.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in claude_code_parity.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in bootstrap.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in optimization.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in cache.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in signatures.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in engine.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in agentic.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "algorithmic",
+      "description": "High conditional complexity in model_strategy.py - consider strategy pattern",
+      "priority": "medium",
+      "intelligence_impact": "maintainability"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in upgrade_dspy3.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in self_analysis_demo.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in self_analysis_pure.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in basic_usage.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in v6_demo.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in test_main.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in meta_learning.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in reasoning.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in workflows.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in workflows.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in community.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in claude_code_parity.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in bootstrap.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in optimization.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in cache.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    },
+    {
+      "type": "performance",
+      "description": "Potential list comprehension opportunity in agentic.py",
+      "priority": "low",
+      "intelligence_impact": "efficiency"
+    }
+  ],
+  "meta_analysis": {
+    "self_awareness_score": 0.0030908449876601244,
+    "recursive_depth": 1473,
+    "learning_sophistication": 0.75,
+    "intelligence_evolution": [
+      "recursive",
+      "self_analysis",
+      "meta_analysis",
+      "introspection",
+      "reflection",
+      "meta_learning",
+      "awareness",
+      "intelligence",
+      "self_improvement",
+      "self_optimization",
+      "consciousness",
+      "cognitive"
+    ],
+    "meta_capabilities": [
+      "meta_programming",
+      "self_analysis",
+      "multi_hop_reasoning"
+    ],
+    "consciousness_indicators": 0,
+    "reasoning_complexity": 0.0076624750264425905,
+    "adaptation_potential": 0.01323304736161711
+  },
+  "recursive_capabilities": {
+    "self_reference_count": 929,
+    "recursive_functions": 1,
+    "meta_methods": 365,
+    "reflection_usage": 24,
+    "self_modification_potential": 1,
+    "recursive_data_structures": 10,
+    "introspection_depth": 1.0
+  },
+  "learning_indicators": {
+    "learning_mechanisms": 268,
+    "adaptation_strategies": 382,
+    "feedback_loops": 239,
+    "optimization_patterns": 147,
+    "knowledge_storage": 469,
+    "pattern_recognition": 674,
+    "learning_sophistication": 1.0
+  }
+}
