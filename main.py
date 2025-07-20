@@ -1,33 +1,34 @@
 import os
-import openai
-from dotenv import load_dotenv
+import sys
+from openai import OpenAI
 
-load_dotenv()
+client = OpenAI(
+    base_url=os.getenv("OPENAI_API_BASE", "https://openrouter.ai/api/v1"),
+    api_key=os.getenv("OPENAI_API_KEY")
+)
 
-api_key = os.getenv("OPENROUTER_API_KEY")
-budget = float(os.getenv("BUDGET_PER_HOUR", 0.05))
-model = os.getenv("MODEL_NAME", "google/gemini-2.0-flash-lite-001")
+model = os.getenv("OPENAI_MODEL", "openrouter/google/gemini-1.5-flash")
 
-openai.api_key = api_key
-openai.api_base = "https://openrouter.ai/api/v1"
+system_prompt = """You are Atlas Coder, a helpful AI that diagnoses and fixes software bugs.
+Given a traceback, you reply with a clear explanation of the error and offer a corrected version of the affected code if possible."""
 
-def ask(prompt):
-    response = openai.ChatCompletion.create(
+print("Atlas Coder ready. Type your question.")
+
+try:
+    if not sys.stdin.isatty():
+        user_input = sys.stdin.read()
+    else:
+        user_input = input("🧠> ")
+
+    response = client.chat.completions.create(
         model=model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_input}
+        ]
     )
-    return response["choices"][0]["message"]["content"]
 
-if __name__ == "__main__":
-    print("Atlas Coder ready. Type your question.")
-    while True:
-        try:
-            prompt = input("🧠> ")
-            if prompt.lower() in ["exit", "quit"]:
-                break
-            response = ask(prompt)
-            print("🤖>", response)
-        except KeyboardInterrupt:
-            break
-        except Exception as e:
-            print("⚠️ Error:", e)
+    print("\n💡", response.choices[0].message.content.strip())
+
+except Exception as e:
+    print("⚠️ Error:", e)
