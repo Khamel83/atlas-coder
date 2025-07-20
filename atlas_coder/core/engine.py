@@ -5,8 +5,24 @@ Implements dspy engine and model management functionality with proper documentat
 following PEP 257 and Google Python Style Guide.
 
 Example:
-    >>> # Usage example will be added when implemented
-    >>> pass
+    >>> from atlas_coder.core.engine import hello
+    >>> hello()
+    'Hello, World!'
 """
 
-# Implementation will be added in subsequent development phases
+class AtlasCoderEngine:
+    """The main engine for Atlas Coder.
+
+    This class is responsible for managing the DSPy engine and models.
+    """
+    def __init__(self):
+        """Initializes the AtlasCoderEngine."""
+        pass
+
+def hello() -> str:
+    """Returns a friendly greeting.
+
+    Returns:
+        A string containing the greeting.
+    """
+    return "Hello, World!"

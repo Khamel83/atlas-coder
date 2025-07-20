@@ -1,9 +1,9 @@
-# Atlas Coder DSPy v6: Revolutionary Cost-Optimized Programming
+# Atlas Coder: Revolutionary Cost-Optimized Programming
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![DSPy](https://img.shields.io/badge/DSPy-2.6+-orange.svg)](https://github.com/stanfordnlp/dspy)
-[![v6 Features](https://img.shields.io/badge/v6-Progressive%20%7C%20Hybrid%20%7C%20Agentic-red.svg)](#v6-features)
+
 
 **Revolutionary systematic programming** that matches Claude Code quality while operating sustainably under **$3/day** through progressive complexity, hybrid model strategies, and agentic operation.
 
@@ -35,19 +35,17 @@ class BugFixer(dspy.Module):
 # Systematic, reliable, works with free models
 ```
 
-## 🎯 v6 Features
+## 🎯 Key Features
 
 ### 🧠 Progressive Complexity Execution
 - **Start Simple**: Quick scans with local models (free)
 - **Escalate Intelligently**: Only use premium models when needed
-- **Quality Thresholds**: Automatic escalation based on result quality
 - **Cost Control**: Respect daily budgets and per-task limits
 
 ### 🔄 Hybrid Model Strategy  
 - **Local First**: Prefer Ollama models for cost efficiency
 - **Smart Selection**: Choose optimal model for task complexity
 - **Fallback Chains**: Graceful degradation when models unavailable
-- **Performance Tracking**: Learn from usage for better selection
 
 ### 🤖 Agentic Operation
 - **Work Detection**: Automatically find meaningful tasks
@@ -63,165 +61,122 @@ class BugFixer(dspy.Module):
 - **Code Refactoring** - Intelligent improvement suggestions
 
 ### 💰 Cost Optimization
-- ✅ **$3/day sustainable operation** with intelligent work detection
-- ✅ **80%+ cache hit rates** after warmup period
-- ✅ **Progressive complexity** - start cheap, escalate only when needed
-- ✅ **Token optimization** - minimize API costs while maximizing quality
-- ✅ **Real-time budget tracking** and cost controls
+- **Sustainable operation** with intelligent work detection
+- **High cache hit rates** after warmup period
+- **Progressive complexity** - start cheap, escalate only when needed
+- **Token optimization** - minimize API costs while maximizing quality
+- **Real-time budget tracking** and cost controls
 
 ## 🚀 Quick Start
 
-### Installation
+To get started with Atlas Coder, simply run the setup script:
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-repo/atlas-coder.git
-cd atlas-coder
-
-# Set up Python environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
+./setup.sh
 ```
 
-### Setup Options
+This script will:
+- Create a Python virtual environment.
+- Install all necessary dependencies.
+- Configure `direnv` for automatic environment activation (if `direnv` is installed).
+- Verify the setup by running `atlas-coder status`.
 
-**Option 1: Free Local Models (Recommended)**
-```bash
-# Install Ollama
-curl -fsSL https://ollama.ai/install.sh | sh
+After running the setup script, you will need to set your `OPENROUTER_API_KEY` in a `.env` file in the project root. You can get a free API key from [OpenRouter](https://openrouter.ai/).
 
-# Pull a free model
-ollama pull llama3.2
+Example `.env` file:
+```
+OPENROUTER_API_KEY=your_api_key_here
 ```
 
-**Option 2: Free API Tiers**
-```bash
-# Set API key for OpenRouter free tier
-echo "OPENAI_API_KEY=your-openrouter-key" > .env
-```
+## 🧪 Continuous Integration (CI)
 
-### Basic Usage (v6)
+This project uses GitHub Actions for continuous integration. The CI pipeline includes:
+- Running tests (`pytest`)
+- Linting (`ruff`)
+- Type checking (`mypy`)
+- Code formatting checks (`black --check`)
 
-```bash
-# Progressive complexity execution
-python atlas_dspy_v6.py fix-bug buggy_code.py "Error message" --level quick
-python atlas_dspy_v6.py generate "REST API" --model-strategy cost-optimal
-
-# Agentic operation
-python atlas_dspy_v6.py agent --run-continuous --max-budget 2.00
-python atlas_dspy_v6.py agent --scan-work
-
-# Cost optimization  
-python atlas_dspy_v6.py optimize --analyze-costs --suggest-improvements
-python atlas_dspy_v6.py bootstrap "new feature description"
-
-# Check v6 status
-python atlas_dspy_v6.py status
-```
-
-### Execution Levels
-- `--level quick` - Fast, minimal cost (local models preferred)
-- `--level detailed` - Balanced quality/cost (smart model selection)  
-- `--level premium` - Highest quality (premium models when justified)
-
-### Model Strategies
-- `--model-strategy cost-optimal` - Prefer free/cheap models
-- `--model-strategy quality-optimal` - Best quality within budget
-- `--model-strategy balanced` - Optimal quality/cost ratio
-- `--model-strategy local-only` - Use only local models
-
-## 📚 Examples
-
-### Bug Fixing Example
-```python
-from dspy_core.workflows import get_orchestrator
-
-orchestrator = get_orchestrator()
-result = orchestrator.execute_workflow(
-    "bug_fix",
-    code=buggy_code,
-    error="ZeroDivisionError: division by zero"
-)
-
-print(result.data['fixed_code'])
-print(result.data['fix_explanation'])
-```
-
-### Code Generation Example
-```python
-result = orchestrator.execute_workflow(
-    "generate",
-    requirements="Create a function to validate email addresses",
-    constraints="Use only standard library"
-)
-
-print(result.data['code'])
-print(result.data['tests'])
-```
+The CI configuration is defined in [.github/workflows/ci.yml](.github/workflows/ci.yml).
 
 ## 🏗️ Architecture
 
 ### Core Components
-- **`dspy_core/signatures.py`** - Declarative behavior definitions
-- **`dspy_core/modules.py`** - Composable programming modules
-- **`dspy_core/workflows.py`** - Complete development workflows
-- **`dspy_core/engine.py`** - Model management and optimization
-- **`dspy_core/cache.py`** - Smart caching for efficiency
+- **`atlas_coder/core/signatures.py`** - Declarative behavior definitions
+- **`atlas_coder/core/modules.py`** - Composable programming modules
+- **`atlas_coder/core/workflows.py`** - Complete development workflows
+- **`atlas_coder/core/engine.py`** - Model management and optimization
+- **`atlas_coder/dspy/caching.py`** - Smart caching for efficiency
 
-### Available Workflows
-- `bug_fix` - Systematic bug diagnosis and fixing
-- `generate` - Code generation from natural language
-- `analyze` - Code quality and security analysis
-- `project` - Complete project generation
-- `refactor` - Code improvement and optimization
+## 📚 Documentation
 
-## 🎯 Advanced Usage
+This project uses [MkDocs](https://www.mkdocs.org/) with the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme for documentation.
 
-### Custom Workflows
-```python
-from dspy_core.workflows import BaseWorkflow
+To build and serve the documentation locally, run the following commands:
 
-class CustomWorkflow(BaseWorkflow):
-    def execute(self, **kwargs):
-        # Your systematic programming logic
-        pass
+```bash
+# Install documentation dependencies
+pip install -e .[docs]
+
+# Build and serve the documentation
+mkdocs serve
 ```
 
-### Model Configuration
-```python
-from dspy_core.engine import initialize_engine
+Then, open your web browser to `http://127.0.0.1:8000` to view the documentation.
 
-# Use specific model
-engine = initialize_engine("ollama/codellama")
+## 🚀 End-User Workflows
 
-# Check performance
-info = engine.get_model_info()
-print(f"Cache hit rate: {info['cache_hit_rate']}")
+Atlas Coder provides powerful command-line tools to streamline your development workflows. Here are some common use cases:
+
+### Generate Code
+
+Generate new code based on your requirements. You can specify the level of detail and the model strategy to use.
+
+```bash
+atlas-coder generate "Create a Python function to validate email addresses" --level detailed --model-strategy quality-optimal
 ```
 
-## 📊 v6 Performance
+- `--level`: Controls the complexity and cost of the generation process. Options: `quick`, `detailed`, `premium`.
+- `--model-strategy`: Determines which models are preferred for the task. Options: `cost-optimal`, `quality-optimal`, `balanced`, `local-only`.
 
-### Cost Efficiency
-- **$3/day sustainable operation** with intelligent work detection
-- **80%+ cache hit rate** after initial warmup  
-- **90% reduction** in API costs through progressive complexity
-- **Quality per dollar** optimization beats expensive alternatives
+### Fix Bugs
 
-### Progressive Complexity Results
-- **Quick level**: 2-5 cents per task, 85% satisfaction rate
-- **Detailed level**: 1-3 cents per task, 92% satisfaction rate
-- **Premium level**: 3-15 cents per task, 98% satisfaction rate
-- **Smart escalation**: Only 15% of tasks need premium models
+Systematically diagnose and fix bugs in your code.
 
-### Hybrid Model Performance
-With v6's intelligent model selection:
-- **Local models**: Handle 60% of tasks at zero cost
-- **Free APIs**: Handle 25% of tasks under 2 cents each
-- **Premium APIs**: Handle 15% of complex tasks efficiently
-- **Overall**: Average 1.2 cents per meaningful task
+```bash
+atlas-coder fix-bug my_buggy_script.py "TypeError: 'NoneType' object is not subscriptable" --level detailed
+```
+
+### Analyze Code
+
+Perform deep quality and security analysis on your codebase.
+
+```bash
+atlas-coder analyze my_project/ --level quick
+```
+
+### Generate Project
+
+Generate complete project structures from high-level descriptions.
+
+```bash
+atlas-coder project "A simple web application using Flask and a SQLite database" --level premium
+```
+
+### Refactor Code
+
+Get intelligent suggestions for refactoring and improving your code.
+
+```bash
+atlas-coder refactor my_old_code.py --level detailed
+```
+
+### YOLO Mode
+
+For advanced users, `--yolo` mode disables interactive confirmations for file writes and Git commits. Use with caution!
+
+```bash
+atlas-coder generate "Create a new feature" --yolo
+```
 
 ## 🤝 Contributing
 

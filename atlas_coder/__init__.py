@@ -2,13 +2,6 @@
 
 A production-ready open source tool for cost-effective AI-assisted development
 using Stanford's DSPy framework with progressive complexity and hybrid models.
-
-Example:
-    >>> from atlas_coder import AtlasCoder
-    >>> coder = AtlasCoder()
-    >>> result = coder.fix_bug("code.py", "error message")
-    >>> print(result.status)
-    'success'
 """
 
 __version__ = "1.0.0"
@@ -29,8 +22,8 @@ class AtlasCoder:
     
     def fix_bug(self, code_file: str, error_message: str):
         """Fix a bug systematically using DSPy workflows."""
-        return self.orchestrator.execute_workflow('bug_fix', 
-                                                 code_file=code_file,
-                                                 error=error_message)
+        return self.orchestrator.fix_bug(code_file=code_file,
+                                         error_message=error_message,
+                                         level="detailed") # Default to detailed for API usage
 
 __all__ = ['AtlasCoder', 'AtlasCoderEngine', 'WorkflowOrchestrator']
