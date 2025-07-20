@@ -6,8 +6,10 @@ following PEP 257 and Google Python Style Guide.
 """
 
 import os
+
 import dspy
 from dotenv import load_dotenv
+
 
 def configure_dspy_lm():
     """Configures the DSPy language model using OPENROUTER_API_KEY from .env."""
