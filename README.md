@@ -1,53 +1,60 @@
-# Atlas Coder: Revolutionary Cost-Optimized Programming
+# Atlas Coder: Cost-Optimized DSPy Programming Assistant
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![DSPy](https://img.shields.io/badge/DSPy-2.6+-orange.svg)](https://github.com/stanfordnlp/dspy)
 
+**Systematic programming assistant** powered by DSPy that delivers reliable code fixes, generation, and analysis while staying **under $1/day** with cost-optimized Gemini 2.0 Flash Lite integration.
 
-**Revolutionary systematic programming** that matches Claude Code quality while operating sustainably under **$3/day** through progressive complexity, hybrid model strategies, and agentic operation.
+## ⚡ Quick Start
 
-## 🚀 Revolutionary Approach
+```bash
+# Install Atlas Coder
+git clone https://github.com/Khamel83/atlas-coder.git
+cd atlas-coder
+pip install -e .
 
-### The Problem DSPy Solves
-- **Before**: Brittle prompt engineering with expensive models
-- **After**: Systematic programming that works with any model
+# Set up API key (optional - works locally too)
+export OPENROUTER_API_KEY="your-key-here"
 
-### Example Transformation
-
-**Old Approach (Prompt Engineering):**
-```python
-prompt = f"You are an expert programmer. Fix this bug: {code}"
-# Brittle, expensive, inconsistent
-```
-
-**New Approach (DSPy Programming):**
-```python
-class BugFixer(dspy.Module):
-    def __init__(self):
-        self.diagnose = dspy.ChainOfThought("code, error -> diagnosis")
-        self.fix = dspy.ProgramOfThought("code, diagnosis -> fixed_code")
-    
-    def forward(self, code, error):
-        diagnosis = self.diagnose(code=code, error=error)
-        fix = self.fix(code=code, diagnosis=diagnosis.diagnosis)
-        return fix
-# Systematic, reliable, works with free models
+# Start using Atlas Coder
+atlas-coder status
+atlas-coder generate "REST API with authentication"
+atlas-coder fix-bug buggy_script.py --error "IndexError on line 42"
 ```
 
 ## 🎯 Key Features
 
-### 🧠 Progressive Complexity Execution
-- **Start Simple**: Quick scans with local models (free)
-- **Escalate Intelligently**: Only use premium models when needed
-- **Cost Control**: Respect daily budgets and per-task limits
+### 💰 Cost-Optimized Operations
+- **$1/day budget** with Gemini 2.0 Flash Lite ($0.075/1M tokens)
+- **Local fallback** with Ollama for zero-cost development
+- **Real-time cost tracking** with daily budget enforcement
+- **Smart model selection** based on task complexity
 
-### 🔄 Hybrid Model Strategy  
-- **Local First**: Prefer Ollama models for cost efficiency
-- **Smart Selection**: Choose optimal model for task complexity
-- **Fallback Chains**: Graceful degradation when models unavailable
+### 🔧 Comprehensive CLI Tools
+```bash
+atlas-coder fix-bug script.py --error "Division by zero"    # Fix bugs systematically
+atlas-coder generate "FastAPI with JWT auth"               # Generate complete code
+atlas-coder analyze codebase/ --focus security            # Security & quality analysis
+atlas-coder refactor legacy.py --level premium            # Intelligent refactoring
+atlas-coder cost-report                                   # Track spending
+```
 
-### 🤖 Agentic Operation
+### 🧠 DSPy-Powered Workflows
+- **CompleteBugFixer**: Diagnose → Fix → Test workflow
+- **CodeGenerator**: Requirements → Implementation → Tests
+- **CodeAnalyzer**: Security, performance, and style analysis
+- **Caching**: Reduce costs with intelligent result caching
+
+### ⚙️ Flexible Configuration
+```yaml
+# .atlas-config.yaml
+model_strategy: "cost-optimal"  # cost-optimal | quality-optimal | local-only
+daily_budget: 1.0
+caching:
+  enabled: true
+  ttl_hours: 24
+```
 - **Work Detection**: Automatically find meaningful tasks
 - **Value Assessment**: Prioritize work by impact vs cost
 - **Continuous Operation**: Run autonomously within budget
